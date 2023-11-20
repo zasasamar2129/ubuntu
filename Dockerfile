@@ -29,4 +29,7 @@ ENV HOME /root
 WORKDIR /root
 
 # Define default command.
-CMD ["bash"]
+EXPOSE 8080
+ 
+# Start Gotty with the specified command
+CMD ["bash", "-r", "-w", "--port", "8080",]
